@@ -48,4 +48,4 @@ yarn dev
 ___
 
 ## License
-Distributed under the MID License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.

@@ -1,13 +1,24 @@
 import { NextPage } from 'next'
 import { AppProps } from 'next/dist/next-server/lib/router/router'
-import { ThemeProvider } from '@/src/presentation/providers'
+import {
+  FavoriteProvider,
+  ThemeProvider,
+  ToastProvider
+} from '@/src/presentation/providers'
 import { CSSReset } from '../presentation/styles/global'
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
-  <ThemeProvider>
-    <CSSReset />
-    <Component {...pageProps} />
-  </ThemeProvider>
+  <>
+    <title>Glity Gif Search</title>
+    <ThemeProvider>
+      <ToastProvider>
+        <FavoriteProvider>
+          <CSSReset />
+          <Component {...pageProps} />
+        </FavoriteProvider>
+      </ToastProvider>
+    </ThemeProvider>
+  </>
 )
 
 export default MyApp

@@ -29,7 +29,6 @@ const FavoriteGifOverlay: React.FC<Props> = ({ gif, isHovered }) => {
     const success = document.execCommand('copy', false, gif.url)
 
     success && addToast('Link copiado com sucesso', 'success')
-    console.log(success)
   }
 
   const handleFavoriteIcon = (): React.ReactNode =>

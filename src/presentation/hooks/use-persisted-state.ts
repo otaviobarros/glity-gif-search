@@ -10,7 +10,6 @@ export const usePersistedState = <S>(
     if (process.browser) {
       const storageValue = localStorage.getItem(key)
       if (storageValue) {
-        console.log('persist', JSON.parse(storageValue))
         return JSON.parse(storageValue)
       }
     }

@@ -27,9 +27,8 @@ const GifOverlay: React.FC<Props> = ({ gif, isHovered }) => {
   }
 
   const handleCopyLink = (): void => {
-    const success = document.execCommand('copy', false, gif.url)
-
-    success && addToast('Link copiado com sucesso', 'success')
+    navigator.clipboard.writeText(gif.bitly_url)
+    addToast('Link copiado com sucesso', 'success')
   }
 
   const handleFavoriteIcon = (): React.ReactNode =>

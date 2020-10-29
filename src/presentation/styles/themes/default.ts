@@ -17,7 +17,7 @@ export const defaultTheme: DefaultTheme = {
       main: '#003973'
     },
     secondary: {
-      main: '#E5E5BE'
+      main: '#8a25b1'
     },
     grey: {
       50: '#fafafa',
@@ -47,7 +47,9 @@ export const defaultTheme: DefaultTheme = {
     fontWeightRegular: 400,
     fontWeightMedium: 500,
     fontWeightBold: 700,
-    h1: {},
+    h1: {
+      fontSize: '2.5rem'
+    },
     h2: {},
     h3: {},
     h4: {},

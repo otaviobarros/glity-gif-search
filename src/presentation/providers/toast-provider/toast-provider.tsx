@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { v4 } from 'uuid'
 import { ToastCointainer } from '@/src/presentation/components'
 import { ToastContext } from '@/src/presentation/contexts'

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import { FiAlertCircle, FiCheckCircle, FiInfo, FiX } from 'react-icons/fi'
 import { AnimatedValue } from 'react-spring'
 import { Container } from './toast-styles'

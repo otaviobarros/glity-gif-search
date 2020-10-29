@@ -1,4 +1,3 @@
-import React from 'react'
 import { ActionIconWrapper } from './action-icon-styles'
 
 interface Props {

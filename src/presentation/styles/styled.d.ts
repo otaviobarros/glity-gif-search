@@ -14,6 +14,17 @@ interface PaletteColor {
   dark?: string
 }
 
+export interface Breakpoints {
+  keys: string[]
+  values: {
+    xs: number
+    sm: number
+    md: number
+    lg: number
+    xl: number
+  }
+}
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     type: string
@@ -54,16 +65,7 @@ declare module 'styled-components' {
       subtitle: TypographyTags
       caption: TypographyTags
     }
-    breakpoints: {
-      keys: string[]
-      values: {
-        xs: number
-        sm: number
-        md: number
-        lg: number
-        xl: number
-      }
-    }
+    breakpoints: Breakpoints
     mixins: {
       spacing: (value: number) => string
     }

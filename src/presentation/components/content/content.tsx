@@ -2,20 +2,15 @@ import { useContext, useEffect, useState } from 'react'
 import ResizeObserver from 'react-resize-observer'
 import { Grid, SearchContext } from '@giphy/react-components'
 import { GifsResult } from '@giphy/js-fetch-api'
-import { IGif } from '@giphy/js-types'
-import { GifOverlay } from '..'
 import { useTheme } from 'styled-components'
+import { IGif } from '@giphy/js-types'
+import { handleGifGridColumnsBreakpoints } from '@/src/presentation/lib/helpers'
+import { GifOverlay } from '..'
+import { getBreakpoint } from '../../lib/helpers/get-breakpoint'
 
 type Props = {
   gifs: IGif[]
   gitTrendingFetcher: (offset: number) => Promise<GifsResult>
-}
-
-const COLUMNS_BREAKPOINTS = {
-  lg: 4,
-  md: 3,
-  sm: 2,
-  xs: 1
 }
 
 const Content: React.FC<Props> = ({ gifs, gitTrendingFetcher }) => {
@@ -33,22 +28,10 @@ const Content: React.FC<Props> = ({ gifs, gitTrendingFetcher }) => {
     }
   }, [])
 
-  const handleColumns = (currentBreakpoint: string): void =>
-    setColumns(COLUMNS_BREAKPOINTS[currentBreakpoint])
-
-  const handleBreakpoints = (): void => {
-    const availableBreakpoints = breakpoints.keys.filter(key => {
-      if (width >= breakpoints.values[breakpoints.keys.length - 1]) {
-        return breakpoints.values[breakpoints.keys.length - 1]
-      }
-
-      return breakpoints.values[key] <= width
-    })
-    const currentBreakpoint =
-      availableBreakpoints[availableBreakpoints.length - 1]
-
-    handleColumns(currentBreakpoint)
-  }
+  const handleBreakpoints = (): void =>
+    getBreakpoint(width, breakpoints, currentBreakpoint =>
+      setColumns(handleGifGridColumnsBreakpoints(currentBreakpoint))
+    )
 
   if (!width) return null
 

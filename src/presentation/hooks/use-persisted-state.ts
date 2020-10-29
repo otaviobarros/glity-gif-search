@@ -4,12 +4,13 @@ type UsePersistedStateResponse<S> = [S, Dispatch<SetStateAction<S>>]
 
 export const usePersistedState = <S>(
   key: string,
-  initialState: S
+  initialState: S = null
 ): UsePersistedStateResponse<S> => {
   const [state, setState] = useState(() => {
     if (process.browser) {
       const storageValue = localStorage.getItem(key)
       if (storageValue) {
+        console.log('persist', JSON.parse(storageValue))
         return JSON.parse(storageValue)
       }
     }

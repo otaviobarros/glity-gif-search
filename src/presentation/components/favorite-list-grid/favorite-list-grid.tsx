@@ -6,6 +6,7 @@ import { FavoriteGifOverlay } from '..'
 import { useTheme } from 'styled-components'
 import { getBreakpoint } from '../../lib/helpers/get-breakpoint'
 import { handleGifGridColumnsBreakpoints } from '../../lib/helpers'
+import { NoOptionsText } from './favorite-list-grid-styles'
 
 const FavoriteListGrid: React.FC = () => {
   const { favorites } = useFavorite()
@@ -25,7 +26,11 @@ const FavoriteListGrid: React.FC = () => {
       setColumns(handleGifGridColumnsBreakpoints(currentBreakpoint))
     )
 
-  return (
+  return favorites.length === 0 ? (
+    <NoOptionsText>
+      <h3>Você ainda não possui nenhum GIF favorito 😔</h3>
+    </NoOptionsText>
+  ) : (
     <>
       <Grid
         fetchGifs={null}

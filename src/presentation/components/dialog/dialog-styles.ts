@@ -55,7 +55,7 @@ export const StyledDialog = styled(DialogComponent)`
 
   .rc-dialog-body {
     border-radius: 0 0 4px 4px;
-    padding: 0 0 ${({ theme }) => theme.mixins.spacing(2)};
+    padding: 0;
     background-color: ${({ theme }) => {
       return isThemeDark()
         ? theme.palette.grey[800]

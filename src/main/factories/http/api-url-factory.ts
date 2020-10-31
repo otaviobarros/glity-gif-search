@@ -1,2 +1,2 @@
 export const makeApiUrl = (path: string): string =>
-  `http://localhost:3000/api${path}`
+  `${process.env.NEXT_PUBLIC_API_URL}${path}`

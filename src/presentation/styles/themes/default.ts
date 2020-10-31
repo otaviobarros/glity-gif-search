@@ -51,7 +51,9 @@ export const defaultTheme: DefaultTheme = {
       fontSize: '2.5rem'
     },
     h2: {},
-    h3: {},
+    h3: {
+      fontSize: '1.25rem'
+    },
     h4: {},
     h5: {},
     h6: {},

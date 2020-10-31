@@ -12,7 +12,7 @@ const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState(lightTheme)
 
   useEffect(() => {
-    setTheme(type === 'light' ? darkTheme : lightTheme)
+    setTheme(type === 'light' ? lightTheme : darkTheme)
   }, [type])
 
   const toggleTheme = (): void => setType(type === 'dark' ? 'light' : 'dark')

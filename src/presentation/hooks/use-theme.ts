@@ -6,9 +6,7 @@ export const useTheme = (): ThemeContextProps => {
   const themeContext = useContext(ThemeContext)
 
   if (!themeContext) {
-    throw new Error(
-      'useTheme must be within a ThemeContext to be used correctly'
-    )
+    throw new Error('useTheme must be used within a ThemeContext')
   }
 
   return themeContext

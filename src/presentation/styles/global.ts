@@ -1,9 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const CSSReset = createGlobalStyle`
+  * {
+  box-sizing: border-box;
+  }
+  
   html {
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -80,6 +84,14 @@ export const CSSReset = createGlobalStyle`
 
   img {
     border-style: none;
+  }
+  button {
+    background: transparent;
+    outline: 0;
+    border: 0;
+    color: inherit;
+    padding: 0;
+    margin: 0;
   }
 
   button,

@@ -1,7 +1,7 @@
-import { useTheme } from 'styled-components'
+import { useTheme } from '@/src/presentation/hooks'
 
 export const isThemeDark = (): boolean => {
-  const { type } = useTheme()
+  const { theme } = useTheme()
 
-  return type === 'dark'
+  return theme.type === 'dark'
 }

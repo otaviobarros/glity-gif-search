@@ -14,12 +14,21 @@ This is a scafold to a website that handles gif searches using the Giphy API. Fe
 
 ___
 
+## Demo
+[Glity](https://glity.vercel.app/) (https://glity.vercel.app/)
+
+
+---
+
 ## Built With
 
 * [React.js](https://reactjs.org)
 * [Next.js](https://nextjs.org/)
+* [Giphy SDK](https://developers.giphy.com/docs/sdk)
 * [Styled Components](https://styled-components.com/)
-
+* [React Icons](https://react-icons.github.io/react-icons/)
+* [Polished](https://polished.js.org/)
+* [react-spring](https://www.react-spring.io/)
 ___
 
 ## Prerequisites
@@ -38,7 +47,15 @@ npm install
 # or
 yarn
 ```
-3. Start the server
+3. Configure the environment variables
+```bash
+# https://developers.giphy.com/
+GIPHY_API=YOUR_GIF_API
+# Default to http://localhost:3000
+NEXT_PUBLIC_API_URL=YOUR_API_URL
+```
+
+4. Start the server
 ```bash
 npm run dev
 # or

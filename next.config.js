@@ -20,5 +20,5 @@ module.exports = {
   images: {
     domains: [...generateGiphyCdn(10), 'giphy.com'],
     loader: 'default',
-  },
+  }
 } 

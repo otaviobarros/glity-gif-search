@@ -65,10 +65,10 @@ ___
 * Add unit tests
 * Add integration tests
 * Add e2e tests
-* Ensure 100% test converage
+* Ensure 100% test coverage
 * Integrate with [Travis CI](https://travis-ci.org/)
 * Integrate with [Coveralls](https://coveralls.io/)
-* Create a CI/CD pipeline
+* Create CI/CD pipeline
 
 ___
 

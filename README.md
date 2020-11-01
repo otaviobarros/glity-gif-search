@@ -2,15 +2,14 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 # Glity Gif Search
-
 Do you want to find the perfect gif?
 Surprise, here we are to help you!
 
 ___
 
 ## About the project
-
-This is a scafold to a website that handles gif searches using the Giphy API. Feel free to clone and use the software as you want, with no strings attached! 😉
+This is a scaffold to a website that handles GIF searches using the Giphy API. It was developed using SOLID principles and clean architecture.
+Feel free to clone and use the software as you want, with no strings attached! 😉
 
 ___
 
@@ -21,7 +20,6 @@ ___
 ---
 
 ## Built With
-
 * [React.js](https://reactjs.org)
 * [Next.js](https://nextjs.org/)
 * [Giphy SDK](https://developers.giphy.com/docs/sdk)
@@ -35,7 +33,6 @@ ___
 * npm or yarn
 
 ## Installation
-
 1. Clone the repo
 
 ```bash
@@ -50,7 +47,7 @@ yarn
 3. Configure the environment variables
 ```bash
 # https://developers.giphy.com/
-GIPHY_API=YOUR_GIF_API
+GIPHY_API=YOUR_GIFHY_API_KEY
 # Default to http://localhost:3000
 NEXT_PUBLIC_API_URL=YOUR_API_URL
 ```
@@ -61,6 +58,17 @@ npm run dev
 # or
 yarn dev
 ```
+
+___
+
+## Next Steps
+* Add unit tests
+* Add integration tests
+* Add e2e tests
+* Ensure 100% test converage
+* Integrate with [Travis CI](https://travis-ci.org/)
+* Integrate with [Coveralls](https://coveralls.io/)
+* Create a CI/CD pipeline
 
 ___
 
